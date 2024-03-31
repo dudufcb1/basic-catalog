@@ -6,7 +6,8 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
     <style>
       h1,
       h2 {
@@ -46,8 +47,30 @@
 
       .grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        grid-template-columns: 1fr;
+        place-items: center;
+        min-width: 320px;
         gap: 1rem;
+      }
+      main {
+        padding: 2rem;
+      }
+      main li {
+        text-align: left;
+      }
+      /* Media queries px REGLA ES: Si cumples con un minimo de 350 lo hacemos ⬇️ */
+      @media only screen and (min-width: 998px) {
+        /* Tu código aquí */
+        .grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        main p {
+          text-align: center;
+        }
+        main {
+          padding: 0.5rem;
+        }
       }
     </style>
     <title>Mis Trabajos</title>
